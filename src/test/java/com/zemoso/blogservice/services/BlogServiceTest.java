@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -34,9 +35,18 @@ public class BlogServiceTest {
 		Mockito.when(blogReposit.findAll()).thenReturn(blogList);
 		
 		List<Blog> blogListReturned = blogService.getAllBlogs();
-		assertEquals(blogListReturned.size(), 1);
-		
-		
+		assertEquals( 1,blogListReturned.size());
+	}
+	
+	private Blog getBlog(Long blogId) {
+		Blog blog = new Blog(1001l,"blog title" , "blog content", null, "dhana",  "http://myimages.thisone.com/cats/1","2 min", 122, 0, null);
+		return blog;
 	}
 
+//	@Test
+	public void testGetBlogById() throws Exception{
+		Optional<Blog> blog = Optional.ofNullable(getBlog(1001l));
+		Long id = 1001l;
+		Mockito.when(blogReposit.findById(id)).thenReturn(blog);
+	}
 }

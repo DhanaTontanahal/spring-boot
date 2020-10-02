@@ -22,8 +22,7 @@ public class BlogService {
 	}
 	
 	public Blog getBlogById(Long blogId) throws ResourceNotFoundException {
-		Blog blog = this.blogRepository.findById(blogId).orElseThrow(() -> new ResourceNotFoundException("Blog not found"));
-		return blog;
+		return this.blogRepository.findById(blogId).orElseThrow(() -> new ResourceNotFoundException("Blog not found"));
 	}
 
 	public Blog createBlog(Blog blog) {

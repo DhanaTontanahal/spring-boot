@@ -31,7 +31,7 @@ public class CommentServiceTest {
 		List<Comment> commentList = new ArrayList<>();
 		Mockito.when(commentRepository.findAll()).thenReturn(commentList);
 		List<Comment> commentListReturned = commentService.getAllComments();
-		assertEquals(commentListReturned.size(), 0);
+		assertEquals( 0,commentListReturned.size());
 		
 	}
 

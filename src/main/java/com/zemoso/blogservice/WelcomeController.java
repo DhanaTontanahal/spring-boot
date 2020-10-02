@@ -8,7 +8,7 @@ public class WelcomeController {
 
 	@GetMapping("/welcome")
 	public String getMessage() {
-		return "Welcome to ZeMoSo Technologies !!";
+		return "Welcome to ZeMoSo Technologies";
 		
 	}
 	

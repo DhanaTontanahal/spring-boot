@@ -30,8 +30,6 @@ public class UserServiceTest {
 		List<User> userList = new ArrayList<>();
 		Mockito.when(userRepository.findAll()).thenReturn(userList);
 		List<User> userListReturned = userService.getAllUsers();
-		assertEquals(userListReturned.size(), 0);
-		
+		assertEquals(0,userListReturned.size());	
 	}
-
 }

@@ -19,6 +19,8 @@ import com.zemoso.blogservice.exception.ResourceNotFoundException;
 import com.zemoso.blogservice.model.User;
 import com.zemoso.blogservice.service.UserService;
 
+
+
 @RestController
 @RequestMapping("/api/v1")
 @CrossOrigin(origins = "http://localhost:3000")
@@ -45,8 +47,7 @@ public class UserController {
 		
 		}
 		catch(Exception e) {
-			System.out.println("Exception");
-			e.printStackTrace();
+			isUserExist=false;
 		}
 		
 		return isUserExist;
@@ -54,7 +55,7 @@ public class UserController {
 	
 	
 	@GetMapping("users/{uId}")
-	public ResponseEntity<User> getBlogById(@PathVariable(value = "uId") Long uId) throws ResourceNotFoundException {
+	public ResponseEntity<User> getUserById(@PathVariable(value = "uId") Long uId) throws ResourceNotFoundException {
 		return ResponseEntity.ok().body(this.userService.getUserById(uId));
 	}
 
@@ -83,7 +84,7 @@ public class UserController {
 	}
 	
 	@DeleteMapping("users/{id}")
-	public Map<String,Boolean> deleteBlog(@PathVariable(value="id") Long userId) throws ResourceNotFoundException{
+	public Map<String,Boolean> deleteUser(@PathVariable(value="id") Long userId) throws ResourceNotFoundException{
 		User userFromDB = userService.getUserById(userId);
 		return userService.deleteUser(userFromDB);
 	}

@@ -34,20 +34,15 @@ public class BlogTagController {
 		return this.blogTagService.createBlogTag(blogTag);
 	}
 	
-	//unused
 	@GetMapping("blogtags/{blogId}")
 	public ResponseEntity<List<BlogTag>> getBlogTagByBlogId(@PathVariable(value = "blogId") Long blogId) throws ResourceNotFoundException {
 		return ResponseEntity.ok().body(this.blogTagService.getBlogTagsByBlogId(blogId));
 	}
 	
-	//to get the tag name list for a particular blog
 	@GetMapping("blogtags/tagnames/{blogId}")
 	public ResponseEntity<List<String>> getTagNameListByBlogId(@PathVariable(value = "blogId") Long blogId) throws ResourceNotFoundException {
 		return ResponseEntity.ok().body(this.blogTagService.getTagNameListForBlogId(blogId));
 	}
-	
-	//todo: delete a tag for a blog : not included in first level of problem statement
-
 	
 	
 }

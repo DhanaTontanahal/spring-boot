@@ -21,8 +21,7 @@ public class TagService {
 	}
 
 	public Tag getTagById(Long tagId) throws ResourceNotFoundException {
-		Tag tag = this.tagRepository.findById(tagId).orElseThrow(() -> new ResourceNotFoundException("Tag not found"));
-		return tag;
+		return this.tagRepository.findById(tagId).orElseThrow(() -> new ResourceNotFoundException("Tag not found"));
 	}
 	public Tag createTag(Tag tag) {
 		return this.tagRepository.save(tag);

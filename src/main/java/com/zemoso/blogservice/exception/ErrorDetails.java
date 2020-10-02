@@ -18,7 +18,6 @@ public class ErrorDetails {
 	
 	public ErrorDetails() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 	public Date getTimestamp() {
 		return timestamp;

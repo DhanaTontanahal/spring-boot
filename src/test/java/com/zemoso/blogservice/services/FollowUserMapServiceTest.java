@@ -32,7 +32,7 @@ public class FollowUserMapServiceTest {
 		Mockito.when(followUserMapRepository.findAll()).thenReturn(followUserMapList);
 		
 		List<FollowUserMap> followUserMapListReturned = followUserMapService.getAllFollowUserMaps();
-		assertEquals(followUserMapListReturned.size(), 0);
+		assertEquals (0,followUserMapListReturned.size());
 		
 		
 	}

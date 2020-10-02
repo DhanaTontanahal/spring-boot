@@ -22,13 +22,11 @@ public class UserService {
 	}
 	
 	public Long getUserIdOfUserByUserName(String userName) {
-		System.out.println("In service");
 		return this.userRepository.getUserIdOfUserByUserName(userName);
 	}
 	
 	public User getUserById(Long uId) throws ResourceNotFoundException {
-		User user = this.userRepository.findById(uId).orElseThrow(() -> new ResourceNotFoundException("User not found"));
-		return user;
+		return this.userRepository.findById(uId).orElseThrow(() -> new ResourceNotFoundException("User not found"));
 	}
 	
 	public User createUser(User user) {

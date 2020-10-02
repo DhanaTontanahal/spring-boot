@@ -22,7 +22,6 @@ public class BlogTag {
 
 	public BlogTag() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public BlogTag(Long blogTagId, Long blogId, long tagId) {

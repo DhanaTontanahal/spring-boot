@@ -22,9 +22,8 @@ public class CommentService {
 	}
 
 	public Comment getComentByPostId(Long postId) throws ResourceNotFoundException {
-		Comment comment = this.commentRepository.findById(postId)
+		return this.commentRepository.findById(postId)
 				.orElseThrow(() -> new ResourceNotFoundException("Comment not found"));
-		return comment;
 	}
 
 	

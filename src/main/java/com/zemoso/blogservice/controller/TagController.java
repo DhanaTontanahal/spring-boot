@@ -28,7 +28,7 @@ public class TagController {
 	
 	
 	@GetMapping("tags")
-	public List<Tag> getAllBlogs() {
+	public List<Tag> getAllTags() {
 		return this.tagService.getAllTags();
 	}
 	

@@ -48,6 +48,7 @@ public class Blog {
 	private int clapsCount;
 	
 	@Column(name="updated_date", length=8)
+	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm:ss")
 	private Date updatedDate;
 	
 	public Long getBlogId() {
@@ -147,7 +148,6 @@ public class Blog {
 
 	public Blog() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 }

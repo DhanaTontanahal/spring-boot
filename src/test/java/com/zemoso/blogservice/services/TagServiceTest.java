@@ -32,7 +32,7 @@ public class TagServiceTest {
 		Mockito.when(tagRepository.findAll()).thenReturn(tagList);
 		
 		List<Tag> tagListReturned = tagService.getAllTags();
-		assertEquals(tagListReturned.size(), 0);
+		assertEquals(0,tagListReturned.size());
 		
 		
 	}

@@ -38,4 +38,7 @@ public class FollowUserMapControllerTest {
 				andExpect(MockMvcResultMatchers.status().isOk()).
 				andReturn();
 	}
+	
+
+	
 }

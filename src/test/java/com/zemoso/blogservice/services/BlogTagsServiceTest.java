@@ -32,7 +32,7 @@ public class BlogTagsServiceTest {
 		Mockito.when(blogTagReposit.findAll()).thenReturn(blogTagList);
 		
 		List<BlogTag> blogTagListReturned = blogTagService.getAllBlogTags();
-		assertEquals(blogTagListReturned.size(), 0);
+		assertEquals( 0,blogTagListReturned.size());
 		
 		
 	}
