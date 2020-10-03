@@ -20,7 +20,6 @@ import com.zemoso.blogservice.service.TagService;
 
 @RestController
 @RequestMapping("/api/v1")
-@CrossOrigin(origins = "http://localhost:3000")
 public class TagController {
 	
 	@Autowired
