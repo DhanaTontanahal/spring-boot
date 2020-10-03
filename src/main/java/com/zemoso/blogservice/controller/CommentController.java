@@ -20,6 +20,7 @@ import com.zemoso.blogservice.service.CommentService;
 
 @RestController
 @RequestMapping("/api/v1")
+@CrossOrigin(origins = "https://gentle-shelf-71423.herokuapp.com")
 public class CommentController {
 
 	@Autowired
