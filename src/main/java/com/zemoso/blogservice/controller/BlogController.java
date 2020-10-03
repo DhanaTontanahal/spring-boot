@@ -22,7 +22,6 @@ import com.zemoso.blogservice.service.BlogService;
 
 @RestController
 @RequestMapping("/api/v1")
-@CrossOrigin(origins = "http://localhost:3000")
 public class BlogController {
 
 	@Autowired
